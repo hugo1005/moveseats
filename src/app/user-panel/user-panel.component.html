@@ -1,0 +1,40 @@
+<div class="header-area main">
+  
+  <!-- Notifications dropdown -->
+
+  <app-notification></app-notification>
+  <!-- Profile information -->
+  <div [ngClass]="GetStyles('HEADER-ROW')" (click)="ToggleDropdown()">
+    <div class="profile-access">
+      <p>{{ state.profile?.nickname || 'Sign up' }}</p>
+      <img src="{{ state.profile?.picture }}" class="profile-picture">
+    </div>
+  </div>
+   <img src="./assets/logo-twitter.svg" [routerLink]="['/welcome']"class="logo-twitter">
+  <!-- Dropdown menu !! Can be replaced by ng content!!-->
+  <app-dropout [show]="state.showDropdown" [corner]="true">
+    
+      <app-login></app-login>
+      <!-- <app-profile></app-profile> -->
+      <app-profile-toggle></app-profile-toggle>
+      <!-- <app-dropout-item [(activeItem)]="toggle.lastOpened" title="Open Wallet" [show]="state.loggedInUser">
+        <app-array-display [seats]="UserSeats" [displayType]="'WALLET'" [filter]="state.noFilter"></app-array-display>
+      </app-dropout-item>
+      <app-dropout-item [(activeItem)]="toggle.lastOpened" title="Requests" [show]="state.loggedInUser">
+        <app-array-display [seats]="Requests" [displayType]="'MULTI'" [filter]="state.noFilter"></app-array-display>
+      </app-dropout-item>
+      <app-dropout-item [(activeItem)]="toggle.lastOpened" title="Upgrade" [show]="state.loggedInUser">
+        <app-payments>
+
+        </app-payments>
+      </app-dropout-item>
+      <app-dropout-item [(activeItem)]="toggle.lastOpened" title="Debug" [show]="this.state.debug.enableDebug">
+
+        <app-debug></app-debug>
+
+      </app-dropout-item> -->
+    
+  </app-dropout> 
+</div>
+
+

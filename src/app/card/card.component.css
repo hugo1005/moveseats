@@ -1,0 +1,46 @@
+#appcard { 
+    margin-bottom: 24px;
+}
+
+img {
+    margin-top: 30px;
+    width: 250px;
+}
+
+:host >>> button { 
+    margin-top: auto;
+}
+
+.bg-alt >>> *{
+    color: white;
+}
+
+ @media all and (max-width: 970px) {
+    .card-min {
+      width: 88%;
+    }
+
+    .card-std {
+        width: 88%;
+    }
+  }
+  
+  @media all and (min-width: 971px) and (max-width: 1150px) {
+    .card-std {
+        width: 325px;
+    }
+
+    .card-min {
+        width: 90%;
+    }
+  }
+  
+  @media all and (min-width: 1151px) {
+    .card-std {
+        width: 325px;
+    }
+
+    .card-min {
+        width: 90%;
+    }
+  }

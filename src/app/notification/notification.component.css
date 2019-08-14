@@ -1,0 +1,36 @@
+/* Notifications */
+.notification-area {
+    width: 100vw;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: height 0.4s ease-in;
+}
+
+.notification-action {
+    background: var(--highlight-std);
+    color: var(--color-alt);
+}
+
+.notification-notice {
+    background: var(--bg-alt);
+    color: var(--color-alt);
+}
+
+.notification-warning {
+    background: var(--warning-std);
+    color: var(--color-alt);
+}
+
+.maximised {
+    height: 64px;
+    opacity: 1;
+}
+
+.minimised {
+    height: 0px;
+    opacity: 0;
+}

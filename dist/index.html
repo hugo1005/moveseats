@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SeatSwap</title>
+  <base href="/">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-80318473-2', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Bitter|Raleway|Roboto:300" rel="stylesheet">
+  <style>
+  body {
+    --bg-std: #FFFFFF;
+    --bg-std-alt: #FAFAFA;
+    --bg-std-alt-opac: rgba(250,250,250,0.6);
+    --bg-std-alt-dark: #E8E8E8;
+    --bg-alt: rgba(46,59,62,1); /* dark blue */
+    --bg-alt-faint: rgba(46,59,62,0.05);
+    --bg-focus: #CCCCCC; /* dark grey */
+    --bg-secondary: #4F666B; /* light blue */
+    --bg-darken: #212A2C; /* darker grey */
+
+    --bg-card: rgba(256,256,256,0.75);
+    --shadow: 0px 3px 6px rgba(0,0,0,0.16);
+    --shadow-grow: 0px 3px 6px rgba(0,0,0,0.16);
+
+    --highlight-std: #FF6176; /* pink */
+    --warning-std: #FFA461;
+    --color-std: #2E3B3E;
+    --color-alt: #FFFFFF; /* white */
+    --color-input: #C5C9CA;
+
+    --positive: #87CC4B;
+    --negative: #E8374F;
+
+    --font-family-hdr: 'Bitter', serif;
+    --font-family-h2: 'Roboto', sans-serif;
+    --font-size-h1: 42px;
+    --font-size-h2: 24px;
+    --font-size-li: 18px;
+    --font-family-p: 'Roboto', sans-serif;
+    --font-size-p: 16px;
+    --font-family-action: 'Roboto', sans-serif;
+    --font-weight-action: 300;
+    --font-color-action: rgba(0,0,0,0.6);  
+    --font-color-action: rgba(256,256,256,0.6);    
+
+    --border-w: 2px solid;
+    --indent: 5px;
+
+
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+  }
+  </style>
+<link href="styles.d41d8cd98f00b204e980.bundle.css" rel="stylesheet"/></head>
+<body>
+  <app-root></app-root>  
+  <script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+        .then(function(registration) {
+            console.log('Service Worker registered');
+        })
+        .catch(function(err) {
+            console.log('Service Worker registration failed: ', err);
+        });
+    }
+  </script>  
+<script type="text/javascript" src="inline.5af589adcc4bce57eb86.bundle.js"></script><script type="text/javascript" src="polyfills.859f19db95d9582e19d4.bundle.js"></script><script type="text/javascript" src="vendor.4b2879fc2958c12cf6a9.bundle.js"></script><script type="text/javascript" src="main.be2d970e73c526aecede.bundle.js"></script></body>
+</html>

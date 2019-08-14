@@ -1,0 +1,5 @@
+<button [ngClass]="styles" (click)="ToggleLogin()">{{msg}}</button>
+<div class="highlight-info" *ngIf="!isLoggedIn">
+ <p class="label-std">* I agree to the ~</p>
+ <p class="label-std highlight" [routerLink]="['/terms']">Terms of service </p>
+</div>

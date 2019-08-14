@@ -1,0 +1,18 @@
+<form [formGroup]="state.prefsForm" class="std-alt form-std">
+  <app-radio radioName="seatPositionPreference" [opts]="state.seatPositions" formControlName="prefPosition"></app-radio>
+
+  <label class="label-std" for="rowMin">Between rows</label>
+
+  <!-- TODO: Fix styling + number popping -->
+  <!-- <div id="row-slider" class="slider-multi">
+    <p id="value-min">10</p>
+    <input class="input-slider-alt"
+    type="range" min="1" max="36" step="1"
+    formControlName="minRow">
+    <p id="value-max">25</p>
+  </div> -->
+
+  <app-radio radioName="rowPositionPreference" [opts]="state.rowPositions" formControlName="prefRow"></app-radio>
+
+  <!-- <p>These preferences will be saved to improve seat requests made</p> -->
+</form>

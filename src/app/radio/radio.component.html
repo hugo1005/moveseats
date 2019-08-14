@@ -1,0 +1,6 @@
+<div class="radio-choice">
+  <div class="input-container check" *ngFor="let opt of opts">
+    <input [name]="radioName" [id]="opt.label + '' + radioName" type="radio" [value]="opt.value" (change)="RadioInteraction($event)" [checked]="IsChecked(opt.value)">
+    <label [for]="opt.label + '' + radioName">{{opt.label}}</label>
+  </div>
+</div>

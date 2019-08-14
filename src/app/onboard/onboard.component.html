@@ -1,0 +1,63 @@
+<div class="section multi-cards">
+  <app-card size="MIN">
+    <h1>Promote</h1>
+    <app-media-profile profileName="@Moveseats">
+      Our Twitter Promoition Page
+      to Build greater awareness.
+    </app-media-profile>
+    <app-media-profile profileName="Product Hunt">
+      Upvote us on product hunt and 
+      help build the community
+    </app-media-profile>
+  </app-card>
+  <app-card size="MIN">
+    <h1>Community</h1>
+    <app-media-profile profileName="@MSLiveUpdates">
+      Dedicated community channel letting you know 
+      the latest available flights
+    </app-media-profile>
+    <app-media-profile profileName="@dolan_hugo">
+      Developer updates and 
+      behind the scenes stuff!
+    </app-media-profile>
+  </app-card>
+</div>
+<div class="section bg-light">
+  <app-card size="WIDE" style="width:100%;">
+    <h1>Why Join</h1>
+    <div class="card-flex-row-wrap">
+      <div class="card-flex-col">
+        <app-media-profile profileName="Carrier Independent" imgRef="./assets/join/carrier-indep-2@3x.png" [bevel]="false">
+          Your seating preference is 
+          independent from carrier
+        </app-media-profile>
+        <app-media-profile profileName="Groups Together" imgRef="./assets/join/groups-sit@3x.png" [bevel]="false">
+          Reducing the safety risk,
+          making for more comfortable 
+          travel
+        </app-media-profile>
+      </div>
+      <div class="card-flex-col">  
+        <app-media-profile profileName="Family Package" imgRef="./assets/join/family-package@3x.png" [bevel]="false">
+          A once off payment for the
+          whole family on every flight 
+          you make year round
+        </app-media-profile>
+        <app-media-profile profileName="Fixed Price" imgRef="./assets/join/fixed-price@3x.png" [bevel]="false">
+          Operate an annual subscription 
+          which costs less than a single 
+          seat allocation
+        </app-media-profile>
+      </div>
+    </div>
+  </app-card>
+  <app-card size="WIDE">
+    <h1>Find Flight</h1>
+    <app-flight-search></app-flight-search>
+  </app-card>
+  <app-card size="WIDE">
+    <h1>Latest Flights</h1>
+    <app-latest-flights></app-latest-flights>
+  </app-card>
+  <button class="btn-alt">Join Now!</button>
+</div>

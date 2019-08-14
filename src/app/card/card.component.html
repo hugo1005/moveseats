@@ -1,0 +1,18 @@
+<div [ngClass]="styles">
+    <div id="increment" *ngIf="increment"><h1>{{increment}}</h1></div>
+    <div class="img-space porthole" *ngIf="imageSrc?true:false">
+        <img [src]="imageSrc">
+    </div>
+    <ng-content select="h1"></ng-content>
+    <ng-content select="p"></ng-content>
+    <ng-content select="[class=card-flex-row-wrap]"></ng-content>
+    <ng-content select="app-login"></ng-content>
+    <ng-content select="app-media-profile"></ng-content>
+    <ng-content select="app-input"></ng-content>
+    <ng-content select="app-flight-info"></ng-content>
+    <ng-content select="app-array-display"></ng-content>
+    <ng-content select="app-search-flight"></ng-content>
+    <ng-content select="app-latest-flights"></ng-content>
+    <ng-content select="[id=info]"></ng-content>
+    <ng-content select="button"></ng-content>
+</div>

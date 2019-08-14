@@ -1,0 +1,88 @@
+/* Creates dropdown effect */
+
+.dropdown {
+  
+  z-index: 1;
+
+  width: 100%;
+  /* height: calc(100% - 86px); */
+  
+  padding: 8px 16px 8px 16px;
+
+  transition: visibility 0.4s, height 0.4s, opacity 0.4s, transform 0.4s;
+
+  background: var(--bg-std);
+  box-shadow: 0px 3px 6px rgba(0,0,0,.16);
+
+  border-radius: 5px;
+
+  box-sizing: border-box;
+}
+
+.dropdown-corner {
+  position: absolute; 
+  top: 70px; /* Defined by header-row height*/
+  right: 0px;
+}
+
+.dropdown-center {
+  position: fixed; 
+  bottom: 96px; /* Defined by header-row height*/
+  right: 16px;
+}
+
+
+@media screen and (max-width: 450px) {
+  .dropdown-corner {
+    max-width: none;
+  }
+}
+
+@media screen and (min-width: 451px) {
+  .dropdown-corner {
+    max-width: 375px;
+  }
+
+  .dropdown-center {
+    max-width: 225px;
+  }
+}
+
+/* ul styling */
+ul {
+  list-style-type: none;
+
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+}
+
+/* Standard animation */
+
+.opts-animate {
+  transition: visibility 0.4s, height 0.4s, opacity 0.4s, transform 0.4s;
+}
+
+.opts-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.opts-invisible {
+  opacity: 0;
+  visibility: hidden;
+  border: none;
+
+  transform: translateX(375px);
+}
+
+.opts-invisible-ul {
+  opacity: 0;
+  visibility: hidden;
+  border: none;
+
+  height: 0;
+
+  transform: translateX(375px);
+}

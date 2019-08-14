@@ -1,0 +1,3 @@
+<div *ngFor="let error of errors">
+  <p style="color:var(--warning-std);" *ngIf="formControl.hasError(error.type)">{{formControl.errors[error.type][error.msg] || error.msg}}</p> 
+</div>

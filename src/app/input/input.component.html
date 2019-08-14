@@ -1,0 +1,10 @@
+<div [formGroup]="formGroup">
+<label *ngIf="label" [for]="controlName" class="label-std">{{label}}</label>
+
+<input *ngIf="!opts" class="input-alt" [placeholder]="placeholder"  [formControlName]="controlName">   
+
+
+<app-display-errors [errors]="errors" [ctrl]="ctrl"></app-display-errors>
+<app-radio *ngIf="opts" [opts]="opts" [radioName]="uid" [formControlName]="controlName"></app-radio>   
+
+</div>

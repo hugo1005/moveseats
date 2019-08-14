@@ -1,0 +1,65 @@
+
+
+.opts-animate {
+  transition: visibility 0.4s, height 0.4s, opacity 0.4s, transform 0.4s, color 0.4s;
+}
+
+.opts-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.opts-invisible-li {
+  opacity: 0;
+  visibility: hidden;
+  border: none;
+
+  height: 0px;
+
+  transform: translateX(375px);
+}
+
+.opts-invisible {
+  opacity: 0;
+  visibility: hidden;
+  border: none;
+
+  height: 0px;
+  margin: 0;
+  padding: 0;
+
+  transform: translateX(375px);
+}
+
+li {
+  /*height: 24px;*/
+  list-style-type: none;
+  
+  border-bottom: 1px solid var(--bg-secondary);
+
+  margin: 8px 0px 8px 0px;
+  padding: 8px 0px 8px 0px;
+
+  /* From standard styling */
+    
+  font-family: var(--font-family-hdr);
+  font-size: var(--font-size-li);
+  font-weight: normal;
+
+  color: inherit;
+  text-indent: none;
+}
+
+.li-unfocused {
+  opacity: 0.4;
+}
+
+.li-focused {
+  opacity: 1;
+}
+
+li:hover {
+  transform: translateX(5px);
+}
+
+/* TEST */

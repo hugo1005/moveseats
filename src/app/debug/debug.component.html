@@ -1,0 +1,35 @@
+
+<div class="full-width">
+  <div class="inner">
+    
+      <app-dropout-item-toggle #toggle="itemToggle">
+        <!-- <app-dropout-item [(activeItem)]="toggle.lastOpened" class="std" title="Login Opts" [show]="true">
+          <button class="btn-alt" (click)="DebugToggleLogin('user1')">Toggle User 1</button>
+          <button class="btn-alt" (click)="DebugToggleLogin('user2')">Toggle User 2</button>
+          <button class="btn-alt" (click)="DebugToggleLogin('user3')">Toggle User 3</button>
+        </app-dropout-item> -->
+        <app-dropout-item [(activeItem)]="toggle.lastOpened" class="std" title="Database" [show]="true">
+          <button class="btn-std" (click)="ResetDb()">Reset</button>
+        </app-dropout-item> 
+        <app-dropout-item [(activeItem)]="toggle.lastOpened" class="std" title="Test User" [show]="true">
+          <p>
+            {{state.dbTests.users | async | json}}
+          </p>
+        </app-dropout-item> 
+        <app-dropout-item [(activeItem)]="toggle.lastOpened" class="std" title="Test Flight" [show]="true">
+          <p>
+            {{state.dbTests.flights | async | json}}
+          </p>
+        </app-dropout-item> 
+        <app-dropout-item [(activeItem)]="toggle.lastOpened" class="std" title="User Access" [show]="true">
+          <p>User Access</p>
+          <p>{{this.state.admin.loggedInUser}}</p>
+        </app-dropout-item> 
+
+        <!--<button class="btn-alt" (click)="DebugAddSeat()">Add seat</button>-->
+      </app-dropout-item-toggle>
+  </div>
+</div>
+
+
+ 

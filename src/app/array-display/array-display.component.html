@@ -1,0 +1,11 @@
+<!--- Display window for seats -->
+<div id="display-seats" [ngClass]="GetStyles('DISPLAY')">
+    <app-seat-select #parentSeat [displayType]="displayType" *ngFor="let query of (state.querySeats | async)" [seat]="query" [lightTheme]="false">
+        
+        <app-seat-select [hidden]="displayType!=='MULTI'" [displayType]="'REQUESTS'" *ngFor="let req of (GetRequestsFromRefs(query.requests.in) | async)" [seat]="req" [lightTheme]="false">
+            <p (click)="Action(reqOpt.action, req, query)" *ngFor="let reqOpt of state.displayTypes['REQUESTS']">{{reqOpt.title}}</p>
+        </app-seat-select>
+
+        <p (click)="Action(opt.action, query)" *ngFor="let opt of displayOptions">{{opt.title}}</p>
+    </app-seat-select>
+</div>

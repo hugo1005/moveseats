@@ -1,0 +1,15 @@
+<div class="display-seat">
+  <div class="header-info" *ngIf="displayMeta">
+    <p class="info1">{{FlightId}}</p>
+    <p class="info2">{{FlightDate | day}}</p>
+  </div>
+  <div class="seat-info" (click)="ToggleOptions()">
+    <p>{{seat.seatId | seat}}</p>
+    <p>{{seat.position}}</p>
+    <p class="key-info" *ngIf="displayType==='MULTI'">{{NumberRequests(seat)}} Reqs.</p>
+    <p class="key-info" *ngIf="displayType==='WALLET'">{{seat.swapComplete?'Previously':'Original'}} {{seat.swapComplete?'('+SeatIdPure(seat.swapComplete)+')':''}}</p>
+  </div>
+   <div id="seat-opt" class="seat-info-actions" (click)="ToggleOptionsWithin()" [ngClass]="GetStyles('DROPDOWN')">
+    <ng-content></ng-content>
+  </div> 
+</div>

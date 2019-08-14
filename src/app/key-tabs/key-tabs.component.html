@@ -1,0 +1,16 @@
+<app-dropout-item-toggle #toggle="itemToggle">
+  <app-dropout-item [(activeItem)]="toggle.lastOpened" title="My seats" [show]="state.loggedInUser">
+    <app-array-display [seats]="UserSeats" [displayType]="'WALLET'" [filter]="state.noFilter"></app-array-display>
+  </app-dropout-item>
+  <app-dropout-item [(activeItem)]="toggle.lastOpened" title="Requests In" [show]="state.loggedInUser">
+    <app-array-display [seats]="Requests" [displayType]="'MULTI'" [filter]="state.noFilter"></app-array-display>
+  </app-dropout-item>
+  <app-dropout-item [(activeItem)]="toggle.lastOpened" title="Upgrade" [show]="state.loggedInUser">
+    <app-payments>
+
+    </app-payments>
+  </app-dropout-item>
+  <app-dropout-item [(activeItem)]="toggle.lastOpened" title="Debug" [show]="state.debug">
+      <app-debug></app-debug>
+  </app-dropout-item>
+</app-dropout-item-toggle>

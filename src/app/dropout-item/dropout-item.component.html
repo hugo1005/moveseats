@@ -1,0 +1,8 @@
+<div class="dropout-container">
+    <div class="test-infront">
+        <li [ngClass]="GetStyles('DROPDOWN-LI')" (click)="ToggleInner()">{{title}}</li>
+        <div [ngClass]="GetStyles('INNER-CONTENT')"> 
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

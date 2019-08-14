@@ -1,0 +1,9 @@
+<div [ngClass]="stylesContainer" style="width: 325px;">
+  <div [ngClass]="stylesPicture">
+    <img [src]="imgRef">
+  </div>
+  <div>
+    <h2>{{profileName}}</h2>
+    <p class="p-light"><ng-content></ng-content></p>
+  </div>
+</div>

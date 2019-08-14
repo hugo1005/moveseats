@@ -1,0 +1,84 @@
+
+  <form [formGroup]="state.seatForm" class="multi-cards">
+          <app-card [increment]="''">
+            <h1>Select a flight</h1>
+
+            <app-input style="width: 100%;" 
+            [group]="state.seatForm"
+            lbl="Your flight ref" 
+            controlName="flightId" 
+            [ctrl]="flightId"
+            place="AA1287" 
+            [errors]="
+            [{'type': 'noFlight', 'msg': 'expected'},{'type': 'pattern', 'msg': 'Please enter a valid flight ID'}]">
+            </app-input>
+
+            <app-input style="width: 100%;" 
+            [group]="state.seatForm"
+            controlName="days" 
+            uid="flightDate"
+            [ctrl]="daysLeft"
+            [opts]="state.dayOfFlight"
+            [errors]="[{'type': 'required', 'msg': 'Please select a date'}]">
+            </app-input>
+
+            <!-- info -->
+            <p *ngIf="state.activeAirline">(Detected: {{state.activeAirline}} )</p>    
+            
+            <div id="info" class="card-wide card-flex-col-side bg-std"> 
+              
+                <app-stat display="STD" 
+                [key]="state.activeAirline || 'Airline'" [sub]="flightId.value.toUpperCase() || 'FlightId'"></app-stat>
+              
+                <app-stat display="LIGHT" 
+                [key]="state.activeSeats.length + ' Seats'" [sub]="state.activeSeats.length? 'On Flight': 'New Flight'"></app-stat>
+              
+            </div>
+
+            
+          </app-card>
+
+        <!-- Add new seats -->
+          <app-card [increment]="''">
+            <h1>Add seat</h1>
+
+            <app-input style="width: 100%;" 
+            [group]="state.seatForm"
+            lbl="My current seat" 
+            controlName="seatId" 
+            [ctrl]="state.seatForm"
+            place="12A" 
+            [errors]="
+            [{'type': 'pattern', 'msg': 'Please enter valid seat id'},{'type': 'seatExists', 'msg': 'expected'}, {'type': 'limitReached', 'msg': 'limit'}]">
+            </app-input>
+
+            <app-input style="width: 100%;" 
+            [group]="state.seatForm"
+            controlName="position" 
+            uid="seatPosition"
+            [ctrl]="position"
+            [opts]="state.seatPositions"
+            [errors]="[{'type': 'required', 'msg': 'Please indicate position of your seat'}]">
+            </app-input>
+
+            <div id="info" class="card-wide card-flex-col-side bg-std"> 
+                  <app-stat display="HIGHLIGHT" 
+                  [key]="seatId.value || 'Enter Seat'" [sub]="position.value? (position.value  + ' (confirm ?)' ) : 'Position'">
+                  </app-stat>
+            </div>
+
+            <button [ngClass]='buttonStyle' (click)="AddSeat()">Add Seat</button>
+          </app-card>
+
+          <app-card [increment]="''">
+            <h1>My seats</h1>
+            <p>Tap on a seat to select for swapping (Seats you have already swapped can be viewed in your profile)</p>
+            <!-- <div id="info" class="card-wide card-flex-col-side bg-std"> 
+                <app-stat display="HIGHLIGHT" 
+                [key]="state.selectedSeat? state.selectedSeat.seatId : 'None Active'" sub="(swap this seat)">
+                </app-stat>
+            </div> -->
+
+            <app-array-display [seatRefs]="state.userSeats" [filter]="state.filters.flights" [freeWidth]="false" [lightTheme]="false" [displayType]="'WALLET'" ></app-array-display>
+          </app-card>
+  </form>

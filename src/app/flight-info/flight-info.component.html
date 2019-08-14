@@ -1,0 +1,24 @@
+<div id="flight-info-large" class="card-wide card-flex-row bg-std"> 
+  
+  <app-stat display="HIGHLIGHT"
+  [key]="seat.id" [sub]="seat.msg"></app-stat>
+
+  <app-stat display="STD" 
+  [key]="flight.airline" [sub]="flight.id"></app-stat>
+
+  <app-stat display="LIGHT" 
+  [key]="seats.count + ' Seats'" [sub]="seats.msg"></app-stat>
+
+</div>
+<div id="flight-info-small" class="card-wide card-flex-col-side bg-std"> 
+  
+  <app-stat display="HIGHLIGHT"
+  [key]="seat.id" [sub]="seat.msg"></app-stat>
+
+  <app-stat display="STD" 
+  [key]="flight.airline" [sub]="flight.id"></app-stat>
+  
+  <app-stat display="LIGHT" 
+  [key]="seats.count + ' Seats'" [sub]="seats.msg"></app-stat>
+
+</div>

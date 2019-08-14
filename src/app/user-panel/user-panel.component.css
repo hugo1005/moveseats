@@ -1,0 +1,66 @@
+.header-area {
+  width: 100vw;
+  position: fixed;
+  top: 0px;
+
+  background: var(--bg-std-alt-opac);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.header-row {
+  height: 60px;
+  width: 100%;
+  max-width: 200px;
+
+  background: var(--bg-std-alt-dark);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header-row:hover {
+  background: var(--bg-focus);
+}
+
+.logo-twitter {
+  position: fixed;
+  top: 15px;
+  left: 24px;
+  height: 30px;
+}
+
+
+
+
+/* profile header-row */
+
+.profile-access {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0px 24px 0px 32px;
+}
+
+
+
+
+/* Header format */
+
+.header-row p {
+  padding-right: 16px;
+}
+
+.header-unfocus {
+  background: var(--bg-std-alt);
+}
+
+.header-focus {
+  background: var(--bg-focus);
+}

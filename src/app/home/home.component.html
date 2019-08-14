@@ -1,0 +1,61 @@
+
+
+<!-- For user login / info section etc -->
+
+    <div id="landing" class="full-width">
+      <div class="inner">
+
+        <div id="title">
+          <img src="./assets/logo-v2.svg">
+          
+        </div>
+        <div class="content">
+          <p class="std">Swap your seats to sit closer together</p>
+          <div class="std sub-title">
+            <h2>Join the community!</h2>
+            <p>Add your seats to the database</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- For entering your seat details  -->
+    <img src="./assets/swipe-streak-light.svg" style="width:100%;transform: translate(2.5px,6px);position:relative;z-index:-10;">
+    <div id="swap-form" class="section bg-light" style="min-height:575px">
+        <div class="section-header bg-light">
+            <h1>Get swapping</h1>
+          </div>
+
+        <app-seat-form *ngIf="LoggedInUser" (flightChanges)="ActiveFlight=$event" style="width:100%;"></app-seat-form>
+        <div *ngIf="!LoggedInUser" class="card-wide bg-std">
+            <p>Login / Signup to start swapping</p>
+            <app-login></app-login>
+        </div>
+    </div>
+    <!-- <img src="./assets/swipe-streak.svg" style="width:100%;transform:matrix(-1, 0, 0, -1, 0, -1);position:relative;z-index:-10;"> -->
+
+    <!-- Display available seats -->
+    <!-- DONE: Just restyle this with a white box behind it -->
+    <div class="section bg-light" *ngIf="LoggedInUser">
+      <app-card [isWide]="true" [increment]="''" style="width: 100%;">
+        <h1>Available seats</h1>
+        <p>Tap on seats below to select the seat you want.</p>
+        <app-flight-info></app-flight-info>
+
+        <app-array-display [hidden]="state.user.selectedSeat === undefined" [seats]="ActiveSwaps" [filter]="state.filters.swaps" [displayType]="'SWAPS'" ></app-array-display> 
+      </app-card>
+    </div>
+    <div class="section bg-light" *ngIf="LoggedInUser">
+        <app-card [isWide]="true" [increment]="''" style="width: 100%;">
+          <h1>Requests from Others</h1>
+          <p>When others request your seats they appear hear, tap to approve a swap</p>
+          <app-profile-toggle></app-profile-toggle>
+          
+          <p>Open your profile to find a complete list of your flight seats and status</p>
+          <app-array-display [seats]="Requests" [displayType]="'MULTI'" [filter]="state.filters.flights"></app-array-display>
+        </app-card>
+      </div>
+    <div class="clear-footer bg-light">
+
+    </div>

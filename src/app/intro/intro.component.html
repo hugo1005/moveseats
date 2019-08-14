@@ -1,0 +1,75 @@
+<div id="landing">
+  <div class="card-std card-flex-col bg-std">
+    <div id="only-header">
+      <div class="title">
+        <img class="title-logo" src="./assets/logo-v2.svg">
+      </div>
+      <h1>
+        Don’t let the Algo-pus pick your seats!
+      </h1>
+    </div>
+    <div id="img-header">
+      <div class="text">
+        <div class="title">
+          <img class="title-logo" src="./assets/logo-v2.svg">
+        </div>
+        <h1>
+          Don’t let the Algo-pus pick your seats!
+        </h1>
+      </div>
+      <div class="img"></div>
+    </div>
+    <div>
+      <button (click)="BetaLogin()" class="btn-alt"><h2><!--Swap all year long ( €1 )-->Sign Up now for the Beta</h2></button>
+      <app-login [altStyle]="false"></app-login>
+    </div>
+  </div>
+</div>
+<div>
+  <img src="./assets/swipe-streak-light.svg" style="width:100%;transform: translate(2.5px,6px);position:relative;z-index:-10;">
+  <div id="how-it-works" class="section bg-light" style="min-height:575px">
+    <div class="section-header bg-light">
+      <h1>How it works</h1>
+    </div>
+    <div class="multi-cards">
+      <app-card [increment]="'1'" [imageSrc]="'./assets/steps-seats.png'">
+        <h1>You have a seat you don’t want</h1>
+        <p>So you sign up and post it on our site</p>
+        <app-login></app-login>
+      </app-card>
+      <app-card [increment]="'2'" [imageSrc]="'./assets/steps-swaps.png'">
+        <h1>We get the seats available to swap</h1>
+        <p>So you make your seat request(s)</p>
+      </app-card>
+      <app-card [increment]="'3'" [imageSrc]="'./assets/steps-confirmation.png'">
+        <h1>Wait for confirmation!</h1>
+        <p>If someone wants your seat, they’ll accept your request.</p>
+      </app-card>
+    </div>
+  </div>
+  <div class="section bg-light">
+    <div class="section-header bg-light">
+      <h1>Its Free during Beta!</h1>
+    </div>
+
+    <div class="card-wide bg-std">
+      <h1>We want to have a smooth user experience at launch</h1>
+      <p>Help us by signing up and testing our service with us for the first month!</p>
+      <app-login></app-login>
+      <!-- <h1>Move as seats for as litte as €1 / Year</h1>
+      <p>This small toll keeps our servers ticking over! (Payments by credit card, secured by Paypal)</p>
+      <div class="card-flex-row" style="padding-top: 24px;">
+        <button class="btn-std">Individual ~ 1.50 € / Year</button>
+        <button class="btn-std">2 Persons ~ 2€ / Year</button>
+        <button class="btn-std">4 Persons ~ 3€ / Year</button>
+      </div>
+      <button *ngIf="isLoggedIn" class="btn-alt">Paypal & Credit Cards</button>
+      <div *ngIf="!isLoggedIn">
+        <app-login></app-login>
+        <p class="label-std">To subscribe to a plan please create an account!</p>
+      </div> -->
+    </div>
+  </div>
+
+  
+</div>

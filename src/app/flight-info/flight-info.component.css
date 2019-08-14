@@ -1,0 +1,39 @@
+.stat {
+    min-width: 100px;
+    padding: 0px 16px 0px 16px;
+}
+
+#flight-info-large {
+    margin: 0px auto 24px auto;
+
+}
+
+#flight-info-small {
+   margin: 0px auto 24px auto;
+}
+
+@media all and (max-width: 440px) {
+    #flight-info-large {
+        visibility: hidden;
+        height: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #flight-info-small {
+        visibility: visible;
+    }
+}
+
+@media all and (min-width: 441px) {
+    #flight-info-large {
+        visibility: visible;
+    }
+
+    #flight-info-small {
+        visibility: hidden;
+        height: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+}

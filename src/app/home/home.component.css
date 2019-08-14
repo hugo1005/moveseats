@@ -1,0 +1,55 @@
+
+
+
+/* Creates dropdown effect */
+
+.opts-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.opts-visible-li {
+  visibility: visible;
+  opacity: 1;
+  height: 24px;
+}
+
+
+.opts-invisible {
+  opacity: 0;
+  visibility: hidden;
+  height: 0px;
+  border: none;
+}
+
+
+
+/* footer space for popup */
+
+.clear-footer {
+  height: 200px;
+  width: 100%;
+}
+
+/* containers */
+.swipe-upper {
+  position: absolute;
+  top: 0px;
+
+  width:100%;
+  transform:translateY(1px);
+}
+
+/* Slider input */
+.slider-multi {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.input-slider-alt {
+
+}

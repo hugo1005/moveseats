@@ -1,0 +1,25 @@
+.media-profile {
+    padding: 16px;
+    margin: 24px 0px 0px 0px;
+    border-radius: 10px;
+}
+
+.media-profile:hover {
+    margin: 24px 0px 0px 0px;
+    background: var(--bg-alt-faint);
+}
+
+.media-profile:active {
+    margin: 24px 0px 0px 0px;
+    background: var(--bg-alt-faint);
+}
+
+.picture-container {
+    margin-right: 24px;
+    width: 80px;
+    height: 80px;
+}
+
+.picture-container img {
+    width: 80px;
+}
